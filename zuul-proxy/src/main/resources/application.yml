@@ -21,7 +21,7 @@ zuul:
   add-host-header: true #设置为true重定向是会添加host请求头
   PreLogFilter:
     pre:
-      disable: true #控制是否启用过滤器
+      disable: false #控制是否启用过滤器
 management:
   endpoints:
     web:

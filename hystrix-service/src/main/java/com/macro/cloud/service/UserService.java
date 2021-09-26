@@ -112,6 +112,7 @@ public class UserService {
     public List<User> getUserByIds(List<Long> ids) {
         LOGGER.info("getUserByIds:{}", ids);
         CommonResult commonResult = restTemplate.getForObject(userServiceUrl + "/user/getUserByIds?ids={1}", CommonResult.class, CollUtil.join(ids,","));
+        System.out.println("------这是3:"+commonResult.getData().toString());
         return (List<User>) commonResult.getData();
     }
 }

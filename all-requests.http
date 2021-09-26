@@ -1,0 +1,55 @@
+## zuul测试
+
+### 访问到user-service
+GET http://localhost:8801/userService/user/1
+
+<> 2021-09-26T041730.200.json
+
+### 访问到feign-service
+GET http://localhost:8801/feignService/user/1
+
+<> 2021-09-26T042734.404.json
+<> 2021-09-26T041816.200.json
+
+### 给网关加前缀 prefix:proxy 才能访问
+GET http://localhost:8801/proxy/user-service/user/1
+
+<> 2021-09-26T042730.200.json
+<> 2021-09-26T042556.404.json
+
+### 查看路由信息
+GET http://localhost:8801/actuator/routes
+
+<> 2021-09-26T043231.200.json
+###
+GET http://localhost:8801/actuator/routes/details
+
+### 过滤测试，看日志
+GET http://localhost:8801/user-service/user/1
+
+## config
+### 查看配置信息
+GET http://localhost:8901/master/config-dev
+
+<> 2021-09-26T053133.200.json
+
+### 查看配置文件信息,返回的是内容/master/ 是分支，示例即主分支
+GET http://localhost:8901/master/config-dev.yml
+
+<> 2021-09-26T053139.200.txt
+
+### 查看配置文件信息2
+GET http://localhost:8901/master/config-test.yml
+
+
+### 客户端config-client，改变config-server有不同的结果
+GET http://localhost:9001/configInfo
+
+<> 2021-09-26T061527.200.txt
+<> 2021-09-26T054859.200.txt
+<> 2021-09-26T053952.200.txt
+
+### 客户端config-client 刷新配置，用于配置信息修改后刷新
+POST http://localhost:9001/actuator/refresh
+
+<> 2021-09-26T061447.405.json

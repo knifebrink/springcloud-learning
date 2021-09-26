@@ -56,10 +56,13 @@ public class UserHystrixController {
     @GetMapping("/testCollapser")
     public CommonResult testCollapser() throws ExecutionException, InterruptedException {
         Future<User> future1 = userService.getUserFuture(1L);
+        System.out.println("------这是1");
         Future<User> future2 = userService.getUserFuture(2L);
+        System.out.println("------这是2");
         future1.get();
         future2.get();
         ThreadUtil.safeSleep(200);
+        System.out.println("------这是4");
         Future<User> future3 = userService.getUserFuture(3L);
         future3.get();
         return new CommonResult("操作成功", 200);
