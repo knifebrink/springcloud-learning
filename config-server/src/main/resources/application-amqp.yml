@@ -7,15 +7,15 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/macrozheng/springcloud-config.git
-          username: macro
-          password: 123456
+          uri: https://gitee.com/knifebrink/springcloud-config.git
+          username: needpassword
+          password: needpassword
           clone-on-start: true # 开启启动时直接从git获取配置
   rabbitmq: #rabbitmq相关配置
-    host: localhost
+    host: needpassword
     port: 5672
-    username: guest
-    password: guest
+    username: root
+    password: needpassword
 eureka:
   client:
     service-url:

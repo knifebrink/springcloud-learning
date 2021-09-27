@@ -8,5 +8,5 @@ spring:
       routes:
         - id: remoteaddr_route
           uri: ${service-url.user-service}
-          predicates:
+          predicates: # 有很多的属性可以配置
             - RemoteAddr=192.168.6.107/24

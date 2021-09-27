@@ -12,10 +12,10 @@ spring:
         enabled: true
         service-id: config-server
   rabbitmq: #rabbitmq相关配置
-    host: localhost
+    host: needpassword
     port: 5672
-    username: guest
-    password: guest
+    username: root
+    password: needpassword
 eureka:
   client:
     service-url:

@@ -15,4 +15,10 @@ public class UserController {
     public Object getCurrentUser(Authentication authentication) {
         return authentication.getPrincipal();
     }
+
+    // 增加一个测试接口
+    @GetMapping("/getSomeTest")
+    public Object getSomeTest() {
+        return "返回正确的getSomeTest返回值";
+    }
 }

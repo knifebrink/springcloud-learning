@@ -5,8 +5,8 @@ service-url:
 spring:
   cloud:
     gateway:
-      routes:
-        - id: path_route #路由的ID
+      routes: # 用-分割多个路由节点
+        - id: path_route #路由的ID 横线表示集合类型，分隔开
           uri: ${service-url.user-service}/user/{id} #匹配后路由地址
           predicates: # 断言，路径相匹配的进行路由
             - Path=/user/{id}

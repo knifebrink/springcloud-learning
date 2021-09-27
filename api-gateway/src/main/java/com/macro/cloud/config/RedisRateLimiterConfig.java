@@ -8,7 +8,7 @@ import reactor.core.publisher.Mono;
 /**
  * Created by macro on 2019/9/25.
  */
-@Configuration
+//@Configuration
 public class RedisRateLimiterConfig {
 //    @Bean
 //    KeyResolver userKeyResolver() {
