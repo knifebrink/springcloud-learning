@@ -60,7 +60,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .userDetailsService(userService)
                 .tokenStore(tokenStore) //配置令牌存储策略
                 .accessTokenConverter(jwtAccessTokenConverter)
-                .tokenEnhancer(enhancerChain);
+                .tokenEnhancer(enhancerChain)
+        ;
     }
 
     @Override

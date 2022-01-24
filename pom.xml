@@ -7,6 +7,9 @@
     <groupId>com.macro.cloud</groupId>
     <artifactId>springcloud-learning</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-
+    <modules>
+        <module>oauth2-server</module>
+        <module>oauth2-jwt-server</module>
+    </modules>
+    <packaging>pom</packaging>
 </project>

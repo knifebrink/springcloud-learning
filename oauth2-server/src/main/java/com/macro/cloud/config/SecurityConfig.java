@@ -28,6 +28,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
+    /**
+     * 配置Security
+     */
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.csrf()

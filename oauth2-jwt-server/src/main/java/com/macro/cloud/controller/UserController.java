@@ -27,4 +27,10 @@ public class UserController {
                 .getBody();
     }
 
+    @GetMapping("/getCurrentUserRedis")
+    public Object getCurrentUserRedis(Authentication authentication, HttpServletRequest request) {
+        return authentication.getPrincipal();
+    }
+
+
 }

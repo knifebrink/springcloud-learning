@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 /**
  * 资源服务器配置
  * Created by macro on 2019/9/30.
+ * 应该是配置哪些资源目录需要授权
  */
 @Configuration
 @EnableResourceServer
